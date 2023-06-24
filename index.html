@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hay88~Web</title>
+    <link rel="stylesheet" href="./main.css">
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="container max-w-6xl m-auto">
+            <!--======== head-logo ========-->
+            <div class="head-logo">
+                <div class="flex gap-4 p-4">
+                    <div class=" w-2/6">
+                        <a href="#"><img src="./images/logo.png"></a>
+                    </div>
+                    <div class="marquee relative flex justify-center items-center w-4/6">
+                        <img src="./images/sound.png" class="w-12 sm:w-14 md:w-14 lg:w-14 xl:w-14 left-0 absolute bg-orange-400 rounded-l-full z-50"> 
+                        <marquee width="100%" behavior="scroll" class="text-gray-800 text-md sm:text:lg lg:text-xl xl:text-xl font-bold border-r-4 border-red-400 bg-orange-400 rounded-full p-1.5 pl-8">
+                            Chào mừng bạn đến với cổng game HAY88 – nơi mang đến cho bạn những game đỉnh cao với nhiều thể loại hấp dẫn. Với giao diện thân thiện, đồ họa đẹp mắt và hệ thống game mượt mà. HAY88 cùng với các chương trình khuyến mãi hấp dẫn.  
+                        </marquee> 
+                    </div>
+                </div>
+            </div>
+
+            <!--========= main ========-->
+            <div class="main">
+                <div class="main-content p-4">
+                    <div class="main-item">
+                        <img src="./images/banner.png">
+                    </div>
+
+                    <!-- animation -->
+                    <div class="animation lg:hidden xl:hidden mt-6">
+                        <video loop autoplay muted controls autobuffer playsinline src="./images/video- 4.mp4"
+                        type="video/mp4"></video>
+                    </div>
+                    
+                    <div class="flex justify-center my-10">
+                        <div class="w-9/12 sm:w-full md:w-full lg:w-full xl:w-full flex flex-col justify-center sm:flex-row md:flex-row lg:flex-row xl:flex-row">
+                            <a href="main.html" target="_blank" class="main-anima"><img src="./images/Taigame.png"></a>
+                            <a href="main.html"target="_blank" class="main-anima2"><img src="./images/Choithu.png" class="transform transition hover:scale-90 duration-300"></a>
+                            <a href="main.html"target="_blank" class="main-anima3"><img src="./images/tintuc.png"></a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!-- video -->
+            <div class="video">
+                <video loop autoplay muted controls autobuffer playsinline src="./images/video-6.mp4" type="video/mp4"></video>
+            </div>
+            <div class="download hidden xl:block">
+                <div class="down-item relative transform transition hover:scale-90 duration-300">
+                    <a href="#" target="_blank"><img src="./images/playstore.png"></a>
+                    <img src="./images/hand-cursor.png" class="icon absolute top-0 right-4">
+                </div>
+                <div class="down-item relative transform transition hover:scale-90 duration-300 py-4">
+                    <a href="#" target="_blank"><img src="./images/appstore.png"></a>
+                    <img src="./images/hand-cursor.png" class="icon absolute top-4 right-4">
+                </div>
+                <div class="down-item relative transform transition hover:scale-90 duration-300">
+                    <a href="#" target="_blank"><img src="./images/apk.png"></a>
+                    <img src="./images/hand-cursor.png" class="icon absolute top-0 right-4">
+                </div>
+            </div>
+
+            <div id="divSlider" class="hidden xl:block">
+                <div class="block red"><img src="./images/Banner_ 1.png"></div>
+                <div class="block green"><img src="./images/Banner2.png"></div>
+              </div>
+              
+        </div>
+
+    <script>
+       $("#divSlider > div:gt(0)").hide();
+        setInterval(function() { 
+        $('#divSlider > div:first')
+            .fadeOut(500)
+            .next()
+            .fadeIn(100)
+            .end()
+            .appendTo('#divSlider');
+        },  3000);
+    </script>
+</body>
+</html>
